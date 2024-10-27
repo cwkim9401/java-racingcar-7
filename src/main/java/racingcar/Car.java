@@ -12,4 +12,8 @@ public class Car {
     public int move() {
         return position + RandomNumber.go();
     }
+
+    public String positionView() {
+        return "-".repeat(move());
+    }
 }
