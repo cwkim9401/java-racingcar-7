@@ -10,7 +10,13 @@ public class Input {
         if (nameInput.isEmpty()) {
             throw new IllegalArgumentException("값을 입력하십시오");
         }
-        return nameInput.split(",");
+        String[] carNames = nameInput.split(",");
+        for (int i = 0; i < carNames.length; i++) {
+            if (carNames[i].length() > 5) {
+                throw new IllegalArgumentException("5자 이하로 입력하십시오");
+            }
+        }
+        return carNames;
     }
 
     public static int times() {
